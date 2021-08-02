@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Consulta de dulces</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!--CODIGO PARA PONER IMAGEN EN LA PESTAÑA DEL NAVEGADOR-->
+
+    <link rel="icon" href="logo.ico">
+
+</head>
+
+<body style="background-color:#5e2129;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo.PNG" style="width: 10%;" alt="">CADEZU
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Registro
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Registro_Dulces.html">Dulces</a>
+                        <a class="dropdown-item" href="Registro_Paquetes.html">Paquetes</a>
+                        <a class="dropdown-item" href="REGISTRO_EMPLEADOS.html">Empleados</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="SISTEMA_VENTAS.html">Ventas</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Consultas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="ConsultaDeDulces.html">Dulces</a>
+                        <a class="dropdown-item" href="ConsultaPaquetes.html">Paquetes</a>
+                        <a class="dropdown-item" href="Consulta_Empleados.html">Empleados</a>
+                        <a class="dropdown-item" href="Consulta_Ventas.html">Ventas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="CORTE_CAJA.html">Corte de caja</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Cerrar Sesion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center">
+        <h2 style="color: aliceblue;">Consulta de Dulces</h2>
+    </div>
+    <br><br>
+    <div class="container">
+        <label style="color:aliceblue">ID o Nombre del Dulce:</label>
+        <input type="search" id="buscador" name="buscador" placeholder="Ejemplo: 1 o Gomitas." />
+        <label style="color:aliceblue">Marca:</label>
+        <select id="marca" name="marca">
+            <option value="0">Seleccione...</option>
+            <option value="ricolino">Ricolino</option>
+            <option value="sabritas">Sabritas</option>
+            <option value="tiaRosa">TiaRosa</option>
+        </select>
+        <label style="color:aliceblue">categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="0">Seleccione...</option>
+            <option value="paleta">Paleta</option>
+            <option value="chocolate">chocolate</option>
+            <option value="carameloDuro">CarameloDuro</option>
+        </select>
+        <label style="color:aliceblue">Lote:</label>
+        <input type="search" id="lote" name="lote" placeholder="Ejemplo 1" />
+        <button type="button" class="btn btn-primary">buscar</button>
+    </div>
+    <br><br>
+    <div clas="container">
+        <table class="table table-dark table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Id Dulces</th>
+                    <th>categoria</th>
+                    <th>Marca</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Descuento</th>
+                    <th>Caducidad</th>
+                    <th>Existencia</th>
+                    <th>Costo Mayoreo</th>
+                    <th>Cantidad Mayoreo</th>
+                    <th>Lote</th>
+                    <th>Imagen</th>
+                    <th>Modificar Dulces</th>
+                    <th>Eliminar Dulces</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Chocolate</td>
+                    <td>Hershey</td>
+                    <td>KISSES</td>
+                    <td>$50.00</td>
+                    <td>0</td>
+                    <td>01/12/2026</td>
+                    <td>50</td>
+                    <td>$40.00</td>
+                    <td>100</td>
+                    <td>L1525W2 </td>
+                    <td>
+                        <img src="https://www.superama.com.mx/Content/images/products/img_large/0750102459818L.jpg"
+                            width="150" height="150" />
+                    </td>
+                    <th><button type="button" class="btn btn-info">Actualizar</button></th>
+                    <th><button type="button" class="btn btn-danger">Eliminar</button></th>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Chocolate</td>
+                    <td>Hershey</td>
+                    <td>BITES</td>
+                    <td>$60.00</td>
+                    <td>0</td>
+                    <td>02/12/2026</td>
+                    <td>50</td>
+                    <td>$40.00</td>
+                    <td>100</td>
+                    <td>L2525W2</td>
+                    <td>
+                        <img src="https://www.superama.com.mx/Content/images/products/img_large/0750102452378L.jpg"
+                            width="150" height="150" />
+                    </td>
+                    <th><button type="button" class="btn btn-info">Actualizar</button></th>
+                    <th><button type="button" class="btn btn-danger">Eliminar</button></th>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Chocolate</td>
+                    <td>Hershey</td>
+                    <td>RESSES</td>
+                    <td>$60.00</td>
+                    <td>0</td>
+                    <td>02/12/2026</td>
+                    <td>50</td>
+                    <td>$40.00</td>
+                    <td>100</td>
+                    <td>L2525W2</td>
+                    <td>
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMRERITExMWEhUXEhUWGBYYGBUXFxIWFxUaFxgbGBcYHigiGBolGxYXITEhJSkrLi4uGB8zODMuNystLisBCgoKDg0OGxAQGyslICUtLy0tMC0wLi0tKy0tMC0vLy0vLS03LysvLi0tLS0wLTUtLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAwADAQEAAAAAAAAAAAAABQYHAgMEAQj/xABIEAABAwEFAwQNCgQGAwAAAAABAAIRAwQFEiExBkFREyJhcQcUFiMyQlSBkZOxwdMVM1JTYnKSodLwJDSD0UNEgpTh8WNzov/EABoBAQACAwEAAAAAAAAAAAAAAAACAwEEBQb/xAA5EQACAQICBgcGBgEFAAAAAAAAAQIDEQQhEjFBUWGRBRRxobHB0RMVInKB8CMyNFKS4TNDU2Ki8f/aAAwDAQACEQMRAD8A3FERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAQV57UWezvNOo44gASGtJwyJAPTEHzhdFPbSyO8Zw626KndkQ4rZGNrsNICAILN8OPjHOeojLjXaDZMcSAuXVxlSM3FWyZ6LDdF0KlKM5Xu0m8/6Nxs9dtRocxwc06EGQV3LILrvatZXnA7fm05tf1t49IzU93Z2r6ul+F/61bDHwa+JNPma9ToOqpfhyTXHJmgos97tLV9VS/C/9a89fbC3k80UGDgaNV59IqjoU+vUuPJlUuhsSllZ/VedjSkWXna68eNm08nq6/7jToQ7YXjnnZ+j+Hq5cZ7/AJqXXaO/ufoQ90Yv9q/lH1NQRZcdsrwz51m6O8Vcuvv+a+91948bNp5PV1/3GnQnXaO/ufoPdGL/AGr+UfU1BFmHdZeO42fTyerrx+f06EdtfeI32caf5er5/wDH/fSnXKO/ufoPdOK/av5R9TT0WaWbbO2tnGKD+EUqjI9NUzuXJ22tr3Cj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"
+                            width="150" height="150" />
+                    </td>
+                    <th><button type="button" class="btn btn-info">Actualizar</button></th>
+                    <th><button type="button" class="btn btn-danger">Eliminar</button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <title>Consulta de ventas</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!--CODIGO PARA PONER IMAGEN EN LA PESTAÑA DEL NAVEGADOR-->
+
+  <link rel="icon" href="logo.ico">
+
+</head>
+
+<body style="background-color:#5e2129;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="logo.PNG" style="width: 10%;" alt="">CADEZU
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Registro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="Registro_Dulces.html">Dulces</a>
+            <a class="dropdown-item" href="Registro_Paquetes.html">Paquetes</a>
+            <a class="dropdown-item" href="REGISTRO_EMPLEADOS.html">Empleados</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="SISTEMA_VENTAS.html">Ventas</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Consultas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="ConsultaDeDulces.html">Dulces</a>
+            <a class="dropdown-item" href="ConsultaPaquetes.html">Paquetes</a>
+            <a class="dropdown-item" href="Consulta_Empleados.html">Empleados</a>
+            <a class="dropdown-item" href="Consulta_Ventas.html">Ventas</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="CORTE_CAJA.html">Corte de caja</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Cerrar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <font color="white">
+    <center>
+      <h2>Consulta de ventas</h2>
+    </center>
+    <br>
+    <form action="" method="GET">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <label>ID de ventas</label>
+            <br>
+            <input type="search" id="buscaIdVenta" name="buscaIdVenta" placeholder="Ej. 1" />
+          </div>
+          <div class="col-sm">
+            <label>Fecha de venta</label>
+            <br>
+            <input type="search" id="buscaFechaVenta" name="buscaFechaVenta" placeholder="Ej. 27/10/2020" />
+          </div>
+          <div class="col-sm">
+            <label>ID empleado</label>
+            <br>
+            <input type="search" id="buscaIdEmpleado" name="buscaIdEmpleado" placeholder="Ej. 1" />
+          </div>
+          <div class="col-sm">
+            <button name="button" class="btn btn-xs" style="width:75px; height:75px"><img src="img/Lupa.png"
+                style="width: 100%;" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr color="yellow">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id ventas</th>
+                <th scope="col">Productos vendidos</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">Descuento</th>
+                <th scope="col">Total venta</th>
+                <th scope="col">Fecha venta</th>
+                <th scope="col">Id empleado</th>
+                <th scope="col">Actualizar/eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td> 2 paquete San Valentin </td>
+                <td> 500 </td>
+                <td> 0 </td>
+                <td> 500 </td>
+                <td> 13/05/2020 </td>
+                <td> 1 </td>
+                <td> <button type="button" class="btn btn-info">Actualizar</button> <button type="button" class="btn btn-danger">Eliminar</button> </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td> Hershey RESSES, KISSES, BITES </td>
+                <td> 170 </td>
+                <td> 0 </td>
+                <td> 170 </td>
+                <td> 13/05/2020 </td>
+                <td> 1 </td>
+                <td> <button type="button" class="btn btn-info">Actualizar</button> <button type="button" class="btn btn-danger">Eliminar</button> </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td> 3 Paquete Dia del niño </td>
+                <td> 331.50 </td>
+                <td> 0 </td>
+                <td> 331.50 </td>
+                <td> 30/04/2021 </td>
+                <td> 2 </td>
+                <td> <button type="button" class="btn btn-info">Actualizar</button> <button type="button" class="btn btn-danger">Eliminar</button> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </font>
+</body>
+
+</html>
